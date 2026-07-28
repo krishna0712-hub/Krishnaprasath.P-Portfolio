@@ -2,10 +2,10 @@
 
 ![Website screenshot](assets/hero.png)
 
-Live demo: https://krishnaprasath.dev
+Live demo: https://krishnaprasath-portfolio.vercel.app
 
 One-line summary
-I am a B.Tech student specializing in Artificial Intelligence & Data Science who builds practical ML and computer-vision projects, data pipelines, and automation tools. This repository contains my personal portfolio website that highlights projects, internships, certifications, and contact information.
+I am a B.Tech student specializing in Artificial Intelligence & Data Science who builds practical ML and computer-vision projects, data pipelines, and automation tools. This repository contains my [...]
 
 Contents
 - Home — short intro and hero section
