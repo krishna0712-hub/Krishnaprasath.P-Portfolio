@@ -2,8 +2,6 @@
 
 ![Website screenshot](assets/hero.png)
 
-Live demo: https://krishnaprasath-portfolio.vercel.app
-
 One-line summary
 I am a B.Tech student specializing in Artificial Intelligence & Data Science who builds practical ML and computer-vision projects, data pipelines, and automation tools. This repository contains my [...]
 
@@ -28,7 +26,6 @@ How to view locally
 
 2. Open `index.html` in your browser, or run a simple static server:
    python -m http.server 8000
-   # then visit http://localhost:8000
 
 Deploy
 - GitHub Pages: enable Pages for the repository (use the `main` branch / root). The site will serve the `index.html` from the repo root.
