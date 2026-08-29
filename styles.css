@@ -174,17 +174,25 @@ img {
 }
 
 .btn-nav-resume {
-  background: transparent;
-  color: var(--accent);
-  border: 1px solid var(--accent);
-  padding: 0.5rem 1.25rem;
+  background: var(--accent-gradient);
+  color: #08080a;
+  border: 1px solid transparent;
+  padding: 0.55rem 1.35rem;
   font-size: 0.875rem;
-  border-radius: 4px;
+  font-weight: 700;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px var(--accent-glow);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  transition: var(--transition-smooth);
 }
 
 .btn-nav-resume:hover {
-  background: rgba(0, 242, 254, 0.06);
-  box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 242, 254, 0.45);
+  color: #000;
 }
 
 /* ==========================================================================
@@ -231,6 +239,7 @@ img {
 
 .nav-list {
   display: flex;
+  align-items: center;
   list-style: none;
   gap: 2rem;
 }
@@ -888,6 +897,14 @@ img {
   gap: 2rem;
 }
 
+.contact-email-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
 .contact-email {
   font-size: 2.5rem;
   font-weight: 800;
@@ -896,13 +913,62 @@ img {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
-  margin: 1rem 0;
   border-bottom: 2px solid transparent;
   transition: var(--transition-fast);
 }
 
 .contact-email:hover {
   border-bottom-color: var(--accent);
+}
+
+.copy-email-btn {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transition-fast);
+}
+
+.copy-email-btn:hover {
+  background: rgba(0, 242, 254, 0.1);
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* Toast Notification */
+.toast-notification {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--accent);
+  color: var(--text-primary);
+  padding: 0.85rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 242, 254, 0.2);
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 10000;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.toast-notification.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ==========================================================================

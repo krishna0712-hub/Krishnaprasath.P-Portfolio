@@ -264,4 +264,44 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
   }
+
+  // ==========================================================================
+  // 6. Interactive Copy Email & Toast Notification System
+  // ==========================================================================
+  const copyEmailBtn = document.getElementById('copy-email-btn');
+  const emailLinks = document.querySelectorAll('#contact-email-link, #hero-email, #contact-email-icon');
+  const emailAddress = 'krishnaprasath0712@gmail.com';
+
+  const showToast = (message) => {
+    let toast = document.querySelector('.toast-notification');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.className = 'toast-notification';
+      document.body.appendChild(toast);
+    }
+    toast.innerHTML = `<span>✨</span> <span>${message}</span>`;
+    toast.classList.add('show');
+
+    setTimeout(() => {
+      toast.classList.remove('show');
+    }, 3000);
+  };
+
+  if (copyEmailBtn) {
+    copyEmailBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      navigator.clipboard.writeText(emailAddress).then(() => {
+        showToast(`Copied ${emailAddress} to clipboard!`);
+      }).catch(() => {
+        showToast(`Email: ${emailAddress}`);
+      });
+    });
+  }
+
+  emailLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navigator.clipboard.writeText(emailAddress).catch(() => {});
+      showToast(`Opening Gmail for ${emailAddress}...`);
+    });
+  });
 });
