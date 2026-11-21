@@ -1,54 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Krishna Prasath P - Portfolio. B.Tech student in Artificial Intelligence and Data Science at V.S.B College of Engineering Technical Campus. Developing machine learning models, computer vision, and AI applications.">
+    content="Krishna Prasath P - AI & Data Science Portfolio. B.Tech student in Artificial Intelligence and Data Science at V.S.B College of Engineering Technical Campus (Anna University), Coimbatore. Building full-stack and LLM/RAG applications using Python, FastAPI, Flask, and SQL.">
   <meta name="keywords"
-    content="Krishna Prasath P, Krishna Prasath, Artificial Intelligence, Data Science, Portfolio, Software Engineer, Python, DeepFace, MediaPipe, ML Engineer, Intern">
+    content="Krishna Prasath P, Krishna Prasath, Artificial Intelligence, Data Science, Portfolio, Software Development, Python, Prompt2Plan, LeaveTrack, FastAPI, Flask, React, SQL, LLM, RAG, Machine Learning, Coimbatore">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Krishna Prasath P — AI & Data Science Portfolio">
   <meta property="og:description"
-    content="B.Tech student in Artificial Intelligence and Data Science, eager to apply knowledge of AI, data analysis, and programming to real-world projects.">
+    content="B.Tech student in Artificial Intelligence and Data Science. Developer of Prompt2Plan and LeaveTrack. Hands-on experience building full-stack and LLM/RAG applications using Python, FastAPI, Flask, and SQL.">
   <meta property="og:image" content="assets/krishna.jpg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:title" content="Krishna Prasath P — AI & Data Science Portfolio">
   <meta property="twitter:description"
-    content="B.Tech student in Artificial Intelligence and Data Science, eager to apply knowledge of AI, data analysis, and programming to real-world projects.">
+    content="B.Tech student in Artificial Intelligence and Data Science. Developer of Prompt2Plan and LeaveTrack.">
   <meta property="twitter:image" content="assets/krishna.jpg">
 
-  <link rel="canonical" href="https://krishnaprasath.dev">
+  <link rel="canonical" href="https://krishnaprasath-portfolio.vercel.app">
   <title>Krishna Prasath P — AI & Data Science Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Custom CSS Styles -->
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <!-- Neon Cursor Trail Overlay Canvas -->
+  <!-- Neon Neural Canvas Background -->
   <canvas id="cursor-trail-canvas"></canvas>
+
+  <!-- Ambient Glow Elements -->
+  <div class="ambient-glow glow-top-left"></div>
+  <div class="ambient-glow glow-bottom-right"></div>
 
   <!-- ==========================================================================
        Header & Navigation
        ========================================================================== -->
   <header class="header" id="header">
     <div class="container">
-      <a href="#hero" class="logo" id="header-logo">KP</a>
+      <a href="#hero" class="logo" id="header-logo">
+        <span class="logo-box">KP</span>
+        <span class="logo-text">Krishna Prasath</span>
+      </a>
 
       <nav class="nav" id="nav" aria-label="Main Navigation">
-        <button class="hamburger" id="hamburger" aria-expanded="false" aria-label="Toggle Navigation Menu">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
-
-        <ul class="nav-list">
+        <ul class="nav-list" id="nav-list">
           <li><a href="#hero" class="nav-link active" id="nav-home">Home</a></li>
           <li><a href="#about" class="nav-link" id="nav-about">About</a></li>
           <li><a href="#skills" class="nav-link" id="nav-skills">Skills</a></li>
@@ -59,6 +65,30 @@
           <li><a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-nav-resume"
               id="nav-resume">Resume ↗</a></li>
         </ul>
+
+        <!-- Theme Toggle Switch -->
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle light and dark theme" title="Toggle Theme">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <button class="hamburger" id="hamburger" aria-expanded="false" aria-label="Toggle Navigation Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
       </nav>
     </div>
   </header>
@@ -70,23 +100,22 @@
     <div class="container">
       <div class="hero-grid">
         <div class="hero-content">
-          <span class="eyebrow">AI & DS Student</span>
-          <h1>Hi, I'm <span class="gradient-text">Krishna Prasath.P</span> I build intelligent systems & data
-            solutions.
-          </h1>
-          <p class="hero-subtext">B.Tech student in Artificial Intelligence and Data Science. Passionate about machine
-            learning, computer vision, data analysis, and developing innovative real-world software applications.</p>
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span class="badge-text">Available for AI, Data Science & Software Roles</span>
+          </div>
+          <h1>Building <span class="gradient-text">Intelligent Systems</span> & Full-Stack Solutions.</h1>
+          <p class="hero-subtext">Hi, I'm <strong>Krishna Prasath P</strong> — a B.Tech Artificial Intelligence & Data Science student (graduating 2027). I build full-stack and LLM/RAG applications using Python, FastAPI, Flask, and SQL.</p>
 
           <div class="hero-ctas">
-            <a href="#projects" class="btn btn-primary" id="hero-cta-projects">View Projects →</a>
-            <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"
-              id="hero-cta-resume">View Resume ↗</a>
+            <a href="#projects" class="btn btn-primary" id="hero-cta-projects">Explore Projects →</a>
+            <a href="#contact" class="btn btn-secondary" id="hero-cta-contact">Get In Touch →</a>
           </div>
 
           <div class="social-row">
             <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/krishnaprasath-p-8a53043a3" target="_blank" rel="noopener noreferrer"
-              class="social-icon" aria-label="LinkedIn" id="hero-linkedin">
+            <a href="https://www.linkedin.com/in/krishna-prasath-8a53043a3/" target="_blank" rel="noopener noreferrer"
+              class="social-icon" aria-label="LinkedIn" id="hero-linkedin" title="LinkedIn Profile">
               <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
@@ -94,14 +123,14 @@
             </a>
             <!-- GitHub -->
             <a href="https://github.com/krishna0712-hub" target="_blank" rel="noopener noreferrer" class="social-icon"
-              aria-label="GitHub" id="hero-github">
+              aria-label="GitHub" id="hero-github" title="GitHub Profile">
               <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
               </svg>
             </a>
             <!-- Email -->
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=krishnaprasath0712@gmail.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Email" id="hero-email" title="Compose Email in Gmail">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=krishnaprasath@gmail.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Email" id="hero-email" title="Compose Email in Gmail">
               <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l12-9.725v14.438h-24v-14.438l12 9.725z" />
               </svg>
@@ -110,12 +139,10 @@
         </div>
 
         <div class="hero-visual">
-          <div class="hero-img-wrapper">
+          <div class="hero-img-card">
+            <div class="hero-img-glow"></div>
             <img src="assets/krishna.jpg" alt="Krishna Prasath P Portrait Photo" loading="eager" width="400"
               height="400">
-            <div class="tech-chip chip-1"><span></span>programming • python</div>
-            <div class="tech-chip chip-2"><span></span>database • sql</div>
-            <div class="tech-chip chip-3"><span></span>cloud computing • aws</div>
           </div>
         </div>
       </div>
@@ -129,19 +156,23 @@
     <div class="container">
       <div class="stats-grid">
         <div class="stat-card">
+          <div class="stat-icon">💼</div>
           <div class="stat-number" data-target="2" data-suffix="+">0</div>
           <div class="stat-label">Internships Completed</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number" data-target="1" data-suffix="+">0</div>
-          <div class="stat-label">Featured Project Built</div>
+          <div class="stat-icon">🚀</div>
+          <div class="stat-number" data-target="2" data-suffix="+">0</div>
+          <div class="stat-label">Full-Stack AI Projects</div>
         </div>
         <div class="stat-card">
+          <div class="stat-icon">📜</div>
           <div class="stat-number" data-target="5" data-suffix="+">0</div>
           <div class="stat-label">Certifications Earned</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number" data-target="76" data-suffix=".3%">0</div>
+          <div class="stat-icon">🎓</div>
+          <div class="stat-number" data-target="74.6" data-suffix="%">0</div>
           <div class="stat-label">B.Tech Academic Score</div>
         </div>
       </div>
@@ -155,41 +186,50 @@
     <div class="container">
       <div class="section-header">
         <span class="eyebrow">About Me</span>
-        <h2 class="section-title">Academic Foundation & Professional Drive</h2>
+        <h2 class="section-title">Academic Foundation & Engineering Drive</h2>
+        <p class="section-desc">Combining artificial intelligence expertise with full-stack software development to build real-world products.</p>
       </div>
 
       <div class="about-grid">
         <div class="about-content">
-          <p>I’m a B.Tech student in Artificial Intelligence and Data Science, eager to start my career in the tech
-            industry. I want to apply my knowledge of AI, data analysis, and programming to real-world projects and grow
-            as a professional while contributing to the success of the organization.</p>
-          <p>Driven by curiosity, I specialize in engineering automated pipelines, analyzing complex datasets to extract
-            business value, and integrating machine learning libraries to build interactive software applications.</p>
-        </div>
-        <div>
-          <h3 style="font-size: 1.35rem; margin-bottom: 1.5rem; font-weight: 700;">Education</h3>
-          <div class="education-timeline" style="display: flex; flex-direction: column; gap: 1.5rem;">
-            <div class="education-item" style="padding-left: 1.25rem; border-left: 2px solid var(--accent);">
-              <span
-                style="font-size: 0.8rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em;">2023
-                - 2027</span>
-              <h4 style="font-size: 1.1rem; margin: 0.25rem 0 0.5rem; font-weight: 700;">B. Tech in Artificial
-                Intelligence & Data Science</h4>
-              <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0.25rem;">V.S.B College of
-                Engineering Technical Campus</p>
-              <p style="font-size: 0.85rem; color: var(--text-muted);">(Affiliated with Anna University), Coimbatore •
-                <strong>Score: 76.3%</strong>
-              </p>
+          <p class="lead-text">I am a B.Tech student in <strong>Artificial Intelligence and Data Science (graduating 2027)</strong> with hands-on experience building full-stack and LLM/RAG applications using Python, FastAPI, Flask, and SQL, plus internships in computer vision and data science.</p>
+          <p>Seeking an entry-level role in AI, Data Science or Software Development to apply data analysis and backend development skills to real-world problems. Driven by analytical curiosity, I specialize in building end-to-end applications — from RAG & vector search pipelines to scalable backend REST APIs, service-layer validation engines, and responsive web dashboards.</p>
+          
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon">⚡</span>
+              <div>
+                <h4>LLM / RAG & AI Architecture</h4>
+                <p>Building vector search pipelines (FAISS), knowledge graphs, and automated requirement-to-architecture planning tools.</p>
+              </div>
             </div>
-            <div class="education-item" style="padding-left: 1.25rem; border-left: 2px solid var(--border-color);">
-              <span
-                style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">2022
-                - 2023</span>
-              <h4 style="font-size: 1.1rem; margin: 0.25rem 0 0.5rem; font-weight: 700;">Higher Secondary Certificate
-                (HSC)</h4>
-              <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0.25rem;">R.G. Matric Higher
-                Secondary School</p>
-              <p style="font-size: 0.85rem; color: var(--text-muted);">Udumalpet • <strong>Score: 61.2%</strong></p>
+            <div class="highlight-item">
+              <span class="highlight-icon">🛠️</span>
+              <div>
+                <h4>Full-Stack & Layered Backend Systems</h4>
+                <p>Engineering clean service architectures with Python (FastAPI, Flask), React, SQL, REST APIs, and structured error handling.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="education-card">
+          <h3 class="card-title">Education</h3>
+          <div class="education-timeline">
+            <div class="education-item">
+              <div class="edu-badge">2023 – 2027</div>
+              <h4 class="edu-degree">B.Tech, Artificial Intelligence & Data Science</h4>
+              <p class="edu-institution">V.S.B College of Engineering Technical Campus</p>
+              <p class="edu-meta">(Anna University), Coimbatore</p>
+              <div class="edu-score">Percentage: <span>74.6%</span></div>
+            </div>
+
+            <div class="education-item">
+              <div class="edu-badge alt">2022 – 2023</div>
+              <h4 class="edu-degree">Higher Secondary Certificate (HSC)</h4>
+              <p class="edu-institution">R.G. Matric Higher Secondary School</p>
+              <p class="edu-meta">Udumalpet</p>
+              <div class="edu-score">Percentage: <span>61.2%</span></div>
             </div>
           </div>
         </div>
@@ -198,47 +238,87 @@
   </section>
 
   <!-- ==========================================================================
-       Skills Breakdown Grid (4 Cards)
+       Skills Breakdown Grid
        ========================================================================== -->
   <section class="section-padding reveal" id="skills" style="background-color: var(--bg-secondary);">
     <div class="container">
       <div class="section-header">
-        <span class="eyebrow">Skills Breakdown</span>
-        <h2 class="section-title">Expertise across the development lifecycle</h2>
+        <span class="eyebrow">Technical Skills</span>
+        <h2 class="section-title">Core Competencies & Stack</h2>
+        <p class="section-desc">Technologies and engineering tools used to build end-to-end software solutions.</p>
       </div>
 
       <div class="skills-grid">
-        <!-- Card 1 -->
+        <!-- Card 1: Programming Languages -->
         <div class="skills-card">
-          <span class="skill-card-num">01</span>
-          <span class="skill-card-icon" aria-hidden="true">💻</span>
-          <h3>Programming Languages</h3>
-          <p>Proficient in writing clean, optimized, and scalable code in Python, along with scripting database queries
-            in SQL.</p>
+          <div class="skill-card-header">
+            <span class="skill-card-icon">💻</span>
+            <span class="skill-card-num">01</span>
+          </div>
+          <h3>Programming & Data</h3>
+          <p>Writing clean, efficient code for machine learning models, REST APIs, and data engineering pipelines.</p>
+          <div class="skills-pills">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">SQL</span>
+          </div>
         </div>
-        <!-- Card 2 -->
+
+        <!-- Card 2: AI & Data Science -->
         <div class="skills-card">
-          <span class="skill-card-num">02</span>
-          <span class="skill-card-icon" aria-hidden="true">🛠️</span>
-          <h3>Frameworks &amp; Tools</h3>
-          <p>Experienced in developing applications using Streamlit, version-controlling with Git &amp; GitHub, and
-            coding in Visual Studio Code and Antigravity.</p>
+          <div class="skill-card-header">
+            <span class="skill-card-icon">🧠</span>
+            <span class="skill-card-num">02</span>
+          </div>
+          <h3>AI & Data Science</h3>
+          <p>Developing generative AI systems, RAG workflows, vector search pipelines, and predictive ML models.</p>
+          <div class="skills-pills">
+            <span class="skill-pill">Large Language Models (LLMs)</span>
+            <span class="skill-pill">RAG</span>
+            <span class="skill-pill">Computer Vision</span>
+            <span class="skill-pill">Data Analysis</span>
+            <span class="skill-pill">Data Visualization</span>
+            <span class="skill-pill">FAISS</span>
+          </div>
         </div>
-        <!-- Card 3 -->
+
+        <!-- Card 3: Backend & Web Architecture -->
         <div class="skills-card">
-          <span class="skill-card-num">03</span>
-          <span class="skill-card-icon" aria-hidden="true">🗄️</span>
-          <h3>Database</h3>
-          <p>Experienced in designing database structures, writing complex queries, and managing relational databases
-            with MySQL.</p>
+          <div class="skill-card-header">
+            <span class="skill-card-icon">⚡</span>
+            <span class="skill-card-num">03</span>
+          </div>
+          <h3>Backend, Web & Databases</h3>
+          <p>Developing full-stack web applications, REST APIs, relational database models, and automated test suites.</p>
+          <div class="skills-pills">
+            <span class="skill-pill">FastAPI</span>
+            <span class="skill-pill">Flask</span>
+            <span class="skill-pill">REST APIs</span>
+            <span class="skill-pill">React</span>
+            <span class="skill-pill">Tailwind CSS</span>
+            <span class="skill-pill">MySQL</span>
+            <span class="skill-pill">SQLite</span>
+            <span class="skill-pill">Pytest</span>
+          </div>
         </div>
-        <!-- Card 4 -->
+
+        <!-- Card 4: Tools & Professional Skills -->
         <div class="skills-card">
-          <span class="skill-card-num">04</span>
-          <span class="skill-card-icon" aria-hidden="true">🤝</span>
-          <h3>Professional Skills</h3>
-          <p>Demonstrating core strengths in analytical problem solving, team collaboration, clear communication, and
-            high adaptability.</p>
+          <div class="skill-card-header">
+            <span class="skill-card-icon">🛠️</span>
+            <span class="skill-card-num">04</span>
+          </div>
+          <h3>Tools & Professional Skills</h3>
+          <p>Utilizing modern dev toolchains while collaborating effectively in fast-paced software environments.</p>
+          <div class="skills-pills">
+            <span class="skill-pill">Git</span>
+            <span class="skill-pill">GitHub</span>
+            <span class="skill-pill">Visual Studio Code</span>
+            <span class="skill-pill">Antigravity</span>
+            <span class="skill-pill">Problem Solving</span>
+            <span class="skill-pill">Collaboration</span>
+            <span class="skill-pill">Communication</span>
+            <span class="skill-pill">Adaptability</span>
+          </div>
         </div>
       </div>
     </div>
@@ -251,65 +331,38 @@
     <div class="container">
       <div class="section-header">
         <span class="eyebrow">Experience</span>
-        <h2 class="section-title">Professional Internships</h2>
-        <p class="section-desc">Practical experience in industry-grade artificial intelligence and data science
-          engineering.</p>
+        <h2 class="section-title">Industry Internships</h2>
+        <p class="section-desc">Practical hands-on experience in AI computer vision systems and data science engineering.</p>
       </div>
 
-      <div class="experience-timeline"
-        style="position: relative; max-width: 800px; margin: 0 auto; padding-left: 2rem; border-left: 2px solid var(--border-color);">
+      <div class="experience-timeline">
         <!-- Experience Item 1 -->
-        <div class="experience-item" style="position: relative; margin-bottom: 4rem;">
-          <!-- Node Dot -->
-          <div
-            style="position: absolute; left: calc(-2rem - 6px); top: 6px; width: 10px; height: 10px; border-radius: 50%; background-color: var(--accent); box-shadow: 0 0 10px var(--accent-glow);">
-          </div>
-
-          <div
-            style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; margin-bottom: 0.75rem; gap: 0.5rem;">
+        <div class="experience-card">
+          <div class="exp-timeline-node"></div>
+          <div class="exp-header">
             <div>
-              <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary);">Data Science Intern</h3>
-              <p style="font-size: 1.1rem; color: var(--accent); font-weight: 600; margin-top: 0.25rem;">Geekbase
-                Technologies</p>
+              <h3 class="exp-title">Data Science Intern</h3>
+              <span class="exp-company">Geekbase Technologies</span>
             </div>
-            <span
-              style="font-size: 0.9rem; font-weight: 700; color: var(--text-muted); background: var(--bg-secondary); padding: 0.3rem 0.8rem; border-radius: 4px; border: 1px solid var(--border-color);">06/2025
-              - 07/2025</span>
+            <span class="exp-date">06/2025 – 07/2025</span>
           </div>
-          <ul
-            style="color: var(--text-secondary); padding-left: 1.25rem; font-size: 1rem; line-height: 1.7; display: flex; flex-direction: column; gap: 0.5rem;">
-            <li>Analyzed multiple datasets and applied machine learning techniques to derive actionable, data-driven
-              insights.</li>
-            <li>Performed end-to-end data cleaning, visualization, and model development to support business
-              decision-making.</li>
+          <ul class="exp-bullets">
+            <li>Analyzed datasets, performed data cleaning and visualization, and built machine learning models to derive insights that support data-driven decision-making.</li>
           </ul>
         </div>
 
         <!-- Experience Item 2 -->
-        <div class="experience-item" style="position: relative;">
-          <!-- Node Dot -->
-          <div
-            style="position: absolute; left: calc(-2rem - 6px); top: 6px; width: 10px; height: 10px; border-radius: 50%; background-color: var(--text-muted);">
-          </div>
-
-          <div
-            style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; margin-bottom: 0.75rem; gap: 0.5rem;">
+        <div class="experience-card">
+          <div class="exp-timeline-node"></div>
+          <div class="exp-header">
             <div>
-              <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary);">Artificial Intelligence
-                Intern</h3>
-              <p style="font-size: 1.1rem; color: var(--accent); font-weight: 600; margin-top: 0.25rem;">Emglitz
-                Technologies</p>
+              <h3 class="exp-title">Artificial Intelligence Intern</h3>
+              <span class="exp-company">Emglitz Technologies</span>
             </div>
-            <span
-              style="font-size: 0.9rem; font-weight: 700; color: var(--text-muted); background: var(--bg-secondary); padding: 0.3rem 0.8rem; border-radius: 4px; border: 1px solid var(--border-color);">02/2024
-              - 03/2024</span>
+            <span class="exp-date">02/2024 – 03/2024</span>
           </div>
-          <ul
-            style="color: var(--text-secondary); padding-left: 1.25rem; font-size: 1rem; line-height: 1.7; display: flex; flex-direction: column; gap: 0.5rem;">
-            <li>Developed a real-time vehicle speed detection system using machine learning and computer vision
-              techniques to analyze video footage.</li>
-            <li>Applied ML-based object tracking to accurately estimate vehicle speeds from live video streams,
-              improving detection reliability.</li>
+          <ul class="exp-bullets">
+            <li>Developed a real-time vehicle speed detection system using machine learning and computer vision techniques to analyze video footage and estimate vehicle speeds.</li>
           </ul>
         </div>
       </div>
@@ -317,50 +370,121 @@
   </section>
 
   <!-- ==========================================================================
-       Projects Section ("Latest Projects")
+       Projects Section (Featured Projects Showcase with Live Demos)
        ========================================================================== -->
   <section class="section-padding reveal" id="projects" style="background-color: var(--bg-secondary);">
     <div class="container">
       <div class="section-header">
-        <span class="eyebrow">Portfolio</span>
-        <h2 class="section-title">Transforming Ideas into Intelligent Systems</h2>
-        <p class="section-desc">A selection of machine learning systems, computer vision tools, and automation
-          pipelines.</p>
+        <span class="eyebrow">Projects Showcase</span>
+        <h2 class="section-title">Featured Software & AI Projects</h2>
+        <p class="section-desc">Explore full-stack software applications, RAG pipelines, and automated management systems with live interactive demos.</p>
       </div>
 
       <div class="projects-container">
-        <!-- Project 1 (Prompt2Plan – AI Requirement-to-Project Planner) -->
-        <div class="featured-card">
+        
+        <!-- PROJECT 1: Prompt2Plan (AI Requirement to Project Planner) -->
+        <div class="featured-card" id="project-prompt2plan">
           <div class="featured-img-area">
-            <img src="assets/prompt2plan.png" alt="Prompt2Plan AI Requirement-to-Project Planner Mockup" loading="lazy" width="380"
-              height="380">
+            <div class="project-tag-overlay"><span class="pulse-dot"></span> LIVE DEMO</div>
+            <img src="assets/prompt2plan.png" alt="Prompt2Plan AI Requirement to Project Planner Mockup" loading="lazy" width="550" height="400">
           </div>
           <div class="featured-info">
-            <span class="featured-badge">★ Featured Project — AI Requirement-to-Project Planner</span>
-            <h3>Prompt2Plan</h3>
+            <span class="featured-badge">★ Featured Project — AI System Architecture Planner</span>
+            <h3>Prompt2Plan – AI Requirement to Project Planner</h3>
             <div class="project-tags">
-              <span class="tag">RAG</span>
+              <span class="tag">RAG Pipeline</span>
               <span class="tag">Knowledge Graph</span>
               <span class="tag">FAISS</span>
-              <span class="tag">LLM</span>
+              <span class="tag">LLM NLP</span>
               <span class="tag">FastAPI</span>
               <span class="tag">React</span>
               <span class="tag">SQLite</span>
               <span class="tag">Python</span>
             </div>
-            <p style="margin-bottom: 1rem;"><strong>“Prompt2Plan” – AI Requirement-to-Project Planner:</strong></p>
-            <ul
-              style="color: var(--text-secondary); padding-left: 1.25rem; font-size: 0.95rem; line-height: 1.6; display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 2rem; text-align: left;">
-              <li>Built a RAG + knowledge graph pipeline using LLM-based NLP, FAISS vector search, and dependency mapping to generate technically grounded system architectures from free-text project ideas.</li>
-              <li>Automated task breakdown, effort estimation, and milestone scheduling into structured, time-bound project plans.</li>
-              <li>Developed a full-stack app (FastAPI + React + SQLite) rendering live architecture diagrams, task boards, and timelines from generated plans.</li>
-            </ul>
+            <p class="project-summary">AI requirement-to-project planner converting free-text project ideas into technically grounded system architectures, task breakdowns, effort estimations, and milestone schedules.</p>
+
+            <div class="project-highlights-box">
+              <h4>Key Engineering Highlights:</h4>
+              <ul>
+                <li><strong>RAG & Knowledge Graph Pipeline:</strong> Built a RAG and knowledge graph pipeline using LLM-based NLP, FAISS vector search and dependency mapping to generate technically grounded system architectures from free-text project ideas.</li>
+                <li><strong>Automated Effort & Timeline Scheduling:</strong> Automated task breakdown, effort estimation and milestone scheduling into structured, time-bound project plans.</li>
+                <li><strong>Interactive Full-Stack Application:</strong> Developed a full-stack application (FastAPI, React, SQLite) that renders live architecture diagrams, task boards and timelines from generated plans.</li>
+              </ul>
+            </div>
+
             <div class="project-links">
+              <a href="https://prompt2plan.onrender.com" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary" id="project-prompt2plan-demo" title="Open Prompt2Plan Live Demo">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+                Live Demo ↗
+              </a>
               <a href="https://github.com/krishna0712-hub/Prompt2Plan" target="_blank" rel="noopener noreferrer"
-                class="btn btn-primary" id="project-prompt2plan-github">GitHub Repository ↗</a>
+                class="btn btn-secondary" id="project-prompt2plan-github" title="View Prompt2Plan GitHub Repository">
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+                GitHub Repository ↗
+              </a>
+              <button class="btn btn-secondary open-modal-btn" data-project="prompt2plan">Technical Details ↗</button>
             </div>
           </div>
         </div>
+
+        <!-- PROJECT 2: LeaveTrack (Employee Leave Management System) -->
+        <div class="featured-card" id="project-leavetrack">
+          <div class="featured-img-area">
+            <div class="project-tag-overlay"><span class="pulse-dot"></span> LIVE DEMO</div>
+            <img src="assets/leavetrack.jpg" alt="LeaveTrack Employee Leave Management System Dashboard Interface Mockup" loading="lazy" width="550" height="400">
+          </div>
+          <div class="featured-info">
+            <span class="featured-badge">★ Featured Project — Enterprise Leave Management</span>
+            <h3>LeaveTrack – Employee Leave Management System</h3>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Flask</span>
+              <span class="tag">React</span>
+              <span class="tag">REST APIs</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">Pytest</span>
+            </div>
+            <p class="project-summary">Full-stack employee leave management system providing employee and manager workflows for leave application, approval, rejection, cancellation, and team calendar management.</p>
+
+            <div class="project-highlights-box">
+              <h4>Key Engineering Highlights:</h4>
+              <ul>
+                <li><strong>Workflows & Roles:</strong> Developed a full-stack leave management system using Python, Flask, React, REST APIs and SQL, implementing employee and manager workflows for leave application, approval, rejection, cancellation and team calendar management.</li>
+                <li><strong>Layered Backend Architecture:</strong> Implemented a layered backend architecture with a dedicated service layer for leave validation, including leave-balance checks, overlapping-date detection, role-based authorization, state transitions, audit trails, centralized error handling and structured logging.</li>
+                <li><strong>React Dashboard & Pytest QA:</strong> Built a responsive React and Tailwind CSS dashboard with leave-balance charts, approval queues, status tracking and team calendar views; wrote Pytest unit and integration tests covering business rules and REST API endpoints.</li>
+              </ul>
+            </div>
+
+            <div class="project-links">
+              <a href="https://leavetracker-mu.vercel.app" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary" id="project-leavetrack-demo" title="Open LeaveTrack Live Demo">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+                Live Demo ↗
+              </a>
+              <a href="https://github.com/krishna0712-hub" target="_blank" rel="noopener noreferrer"
+                class="btn btn-secondary" id="project-leavetrack-github" title="View LeaveTrack GitHub Profile/Repository">
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+                GitHub Repository ↗
+              </a>
+              <button class="btn btn-secondary open-modal-btn" data-project="leavetrack">Technical Details ↗</button>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -368,55 +492,68 @@
   <!-- ==========================================================================
        Certifications Section
        ========================================================================== -->
-  <section class="section-padding reveal" id="certifications" style="background-color: var(--bg-primary);">
+  <section class="section-padding reveal" id="certifications">
     <div class="container">
       <div class="section-header">
         <span class="eyebrow">Credentials</span>
-        <h2 class="section-title">Certifications &amp; Workshops</h2>
-        <p class="section-desc">Academic achievements and professional training validating core software engineering,
-          IoT, and Cloud capabilities.</p>
+        <h2 class="section-title">Certifications & Workshops</h2>
+        <p class="section-desc">Professional certifications validating competencies in Cloud Computing, Python, IoT, and Robotics.</p>
       </div>
 
       <div class="certifications-grid">
         <!-- Cert 1 -->
-        <div class="cert-card">
-          <div class="cert-info">
-            <span class="cert-issuer">CSC</span>
-            <h3>Advanced Diploma in Python Programming</h3>
+        <div class="cert-card highlight-cert">
+          <div class="cert-badge-row">
+            <span class="cert-issuer aws">AWS Training & Certification</span>
+            <span class="cert-status-badge aws">Certified</span>
           </div>
-          <span class="cert-date">Completed: May 2023 – Sep 2023</span>
+          <h3>Cloud Practitioner Essentials</h3>
+          <p class="cert-desc">AWS official training validating cloud architecture, security principles, IAM, compute (EC2/Lambda), and cloud fundamentals.</p>
+          <span class="cert-date">📅 July 2026</span>
         </div>
+
         <!-- Cert 2 -->
         <div class="cert-card">
-          <div class="cert-info">
-            <span class="cert-issuer">Top Engineers IIT</span>
-            <h3>Arduino Robotics Workshop</h3>
+          <div class="cert-badge-row">
+            <span class="cert-issuer">NPTEL</span>
+            <span class="cert-status-badge">Certification</span>
           </div>
-          <span class="cert-date">Completed: Dec 2023</span>
+          <h3>Introduction to Internet of Things</h3>
+          <p class="cert-desc">Specialized course covering IoT protocols, sensor networks, edge computing, and smart connected device architectures.</p>
+          <span class="cert-date">📅 Jan 2026 – Apr 2026</span>
         </div>
+
         <!-- Cert 3 -->
         <div class="cert-card">
-          <div class="cert-info">
+          <div class="cert-badge-row">
             <span class="cert-issuer">NPTEL</span>
-            <h3>Cloud Computing</h3>
+            <span class="cert-status-badge">Certification</span>
           </div>
-          <span class="cert-date">Completed: Jul – Oct 2025</span>
+          <h3>Cloud Computing</h3>
+          <p class="cert-desc">Comprehensive certification covering cloud architectures, virtualization, distributed storage systems, and cloud deployment models.</p>
+          <span class="cert-date">📅 Jul 2025 – Oct 2025</span>
         </div>
+
         <!-- Cert 4 -->
         <div class="cert-card">
-          <div class="cert-info">
-            <span class="cert-issuer">NPTEL</span>
-            <h3>Introduction to Internet of Things</h3>
+          <div class="cert-badge-row">
+            <span class="cert-issuer">Top Engineers IIT</span>
+            <span class="cert-status-badge">Workshop</span>
           </div>
-          <span class="cert-date">Completed: Jan – Apr 2026</span>
+          <h3>Arduino Robotics Workshop</h3>
+          <p class="cert-desc">Hands-on practical workshop covering microcontrollers, sensor integration, hardware prototyping, and Arduino embedded programming.</p>
+          <span class="cert-date">📅 Dec 2023</span>
         </div>
+
         <!-- Cert 5 -->
         <div class="cert-card">
-          <div class="cert-info">
-            <span class="cert-issuer">AWS</span>
-            <h3>AWS Cloud Practitioner Essentials</h3>
+          <div class="cert-badge-row">
+            <span class="cert-issuer">CSC</span>
+            <span class="cert-status-badge">Certified</span>
           </div>
-          <span class="cert-date">Completed: Jun 2026</span>
+          <h3>Advanced Diploma in Python Programming</h3>
+          <p class="cert-desc">In-depth Python programming diploma covering core syntax, data structures, algorithms, object-oriented concepts, and software engineering.</p>
+          <span class="cert-date">📅 May 2023 – Sep 2023</span>
         </div>
       </div>
     </div>
@@ -425,66 +562,91 @@
   <!-- ==========================================================================
        Contact Section
        ========================================================================== -->
-  <section class="section-padding reveal" id="contact">
+  <section class="section-padding reveal" id="contact" style="background-color: var(--bg-secondary);">
     <div class="container">
       <div class="contact-content">
-        <span class="eyebrow">Contact</span>
-        <h2 class="section-title">Let's get in touch!</h2>
-        <p class="section-desc">I am open to discussing internship opportunities, collaborative projects, or potential
-          roles in artificial intelligence and data science. Reach out via email or find me on socials!</p>
+        <span class="eyebrow">Get In Touch</span>
+        <h2 class="section-title">Let's Connect & Build Together!</h2>
+        <p class="section-desc">Seeking an entry-level role in AI, Data Science or Software Development to apply data analysis and backend development skills to real-world problems. Reach out via email or connect on social platforms.</p>
 
-        <div class="contact-email-wrapper">
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=krishnaprasath0712@gmail.com" target="_blank" rel="noopener noreferrer" class="contact-email"
-            id="contact-email-link" title="Compose in Gmail">krishnaprasath0712@gmail.com</a>
-          <button id="copy-email-btn" class="copy-email-btn" title="Copy email address">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-            </svg>
-            <span>Copy Email</span>
-          </button>
-        </div>
-        <div style="font-size: 1.25rem; font-weight: 600; color: var(--text-secondary); margin-top: 0.5rem;">Mobile: +91
-          9787586793</div>
+        <div class="contact-card">
+          <div class="contact-email-wrapper">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=krishnaprasath@gmail.com" target="_blank" rel="noopener noreferrer" class="contact-email"
+              id="contact-email-link" title="Compose Email in Gmail">krishnaprasath@gmail.com</a>
+            
+            <button id="copy-email-btn" class="copy-email-btn" title="Copy email address">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Copy Email</span>
+            </button>
+          </div>
 
-        <div class="social-row" style="margin-top: 1rem;">
-          <!-- LinkedIn -->
-          <a href="https://www.linkedin.com/in/krishnaprasath-p-8a53043a3" target="_blank" rel="noopener noreferrer"
-            class="social-icon" aria-label="LinkedIn" id="contact-linkedin">
-            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-            </svg>
-          </a>
-          <!-- GitHub -->
-          <a href="https://github.com/krishna0712-hub" target="_blank" rel="noopener noreferrer" class="social-icon"
-            aria-label="GitHub" id="contact-github">
-            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-            </svg>
-          </a>
-          <!-- Email -->
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=krishnaprasath0712@gmail.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Email" id="contact-email-icon" title="Compose Email in Gmail">
-            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l12-9.725v14.438h-24v-14.438l12 9.725z" />
-            </svg>
-          </a>
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <span class="detail-icon">📱</span>
+              <span>Mobile: <strong>+91 9787586793</strong></span>
+            </div>
+            <div class="contact-detail-item">
+              <span class="detail-icon">📍</span>
+              <span>Location: <strong>Coimbatore, Tamil Nadu, India</strong></span>
+            </div>
+          </div>
+
+          <div class="social-row">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/krishna-prasath-8a53043a3/" target="_blank" rel="noopener noreferrer"
+              class="social-icon" aria-label="LinkedIn" id="contact-linkedin" title="LinkedIn Profile">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </a>
+            <!-- GitHub -->
+            <a href="https://github.com/krishna0712-hub" target="_blank" rel="noopener noreferrer" class="social-icon"
+              aria-label="GitHub" id="contact-github" title="GitHub Profile">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+            </a>
+            <!-- Email -->
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=krishnaprasath@gmail.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Email" id="contact-email-icon" title="Compose Email in Gmail">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l12-9.725v14.438h-24v-14.438l12 9.725z" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
+       Project Detail Modal
+       ========================================================================== -->
+  <div class="modal-overlay" id="project-modal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-body" id="modal-body">
+        <!-- Content inserted dynamically via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
        Footer
        ========================================================================== -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2026 Krishna Prasath P — All rights reserved.</p>
+      <div class="footer-content">
+        <p>&copy; 2026 <strong>Krishna Prasath P</strong> — Crafted for Artificial Intelligence & Data Science Portfolio.</p>
+      </div>
     </div>
   </footer>
 
-  <!-- Link custom JavaScript -->
+  <!-- Custom JavaScript -->
   <script src="script.js"></script>
 </body>
 
