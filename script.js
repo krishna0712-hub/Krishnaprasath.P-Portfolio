@@ -1,17 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
-  // 1. Switchable Dark & Light Mode Theme System
+  // 1. Switchable Warm Editorial Light & Forest Dark Theme System
   // ==========================================================================
   const themeToggleBtn = document.getElementById('theme-toggle');
   const htmlElement = document.documentElement;
+  const THEME_STORAGE_KEY = 'editorial-portfolio-theme';
 
-  // Retrieve saved theme preference or default to dark
-  const savedTheme = localStorage.getItem('portfolio-theme') || 
-    (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+  // Default to the warm cream editorial theme (#F5F0E8) unless user toggled
+  const savedTheme = localStorage.getItem(THEME_STORAGE_KEY) || 'light';
 
   const applyTheme = (theme) => {
     htmlElement.setAttribute('data-theme', theme);
-    localStorage.setItem('portfolio-theme', theme);
+    localStorage.setItem(THEME_STORAGE_KEY, theme);
   };
 
   // Initialize theme
@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
   const header = document.getElementById('header');
   const handleScroll = () => {
+    if (!header) return;
     if (window.scrollY > 40) {
       header.classList.add('scrolled');
     } else {
@@ -92,8 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -40px 0px'
+    threshold: 0.1,
+    rootMargin: '0px 0px -30px 0px'
   });
 
   revealElements.forEach(element => {
@@ -112,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = parseFloat(stat.getAttribute('data-target'));
       const suffix = stat.getAttribute('data-suffix') || '';
       const isDecimal = target % 1 !== 0 || stat.getAttribute('data-target').includes('.');
-      const duration = 1800;
+      const duration = 1400;
       const stepTime = 30;
       const stepCount = duration / stepTime;
       const increment = target / stepCount;
@@ -157,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
       liveDemo: "https://prompt2plan.onrender.com",
       overview: "Prompt2Plan converts unstructured user project ideas into technically grounded system architectures, task dependencies, effort estimations, and milestone timelines.",
       architecture: [
-        "<strong>RAG & Knowledge Graph Pipeline:</strong> Built a RAG and knowledge graph pipeline using LLM-based NLP, FAISS vector search and dependency mapping to generate technically grounded system architectures from free-text project ideas.",
+        "<strong>RAG &amp; Knowledge Graph Pipeline:</strong> Built a RAG and knowledge graph pipeline using LLM-based NLP, FAISS vector search and dependency mapping to generate technically grounded system architectures from free-text project ideas.",
         "<strong>Automated Scheduling:</strong> Automated task breakdown, effort estimation and milestone scheduling into structured, time-bound project plans.",
         "<strong>Full-Stack Interactive Interface:</strong> Developed a full-stack application (FastAPI, React, SQLite) that renders live architecture diagrams, task boards and timelines from generated plans."
       ],
@@ -170,9 +171,9 @@ document.addEventListener('DOMContentLoaded', () => {
       liveDemo: "https://leavetracker-mu.vercel.app",
       overview: "LeaveTrack is an employee leave management platform built with a layered Python Flask backend and an interactive React frontend dashboard.",
       architecture: [
-        "<strong>Employee & Manager Workflows:</strong> Developed a full-stack leave management system using Python, Flask, React, REST APIs and SQL, implementing employee and manager workflows for leave application, approval, rejection, cancellation and team calendar management.",
+        "<strong>Employee &amp; Manager Workflows:</strong> Developed a full-stack leave management system using Python, Flask, React, REST APIs and SQL, implementing employee and manager workflows for leave application, approval, rejection, cancellation and team calendar management.",
         "<strong>Layered Backend Architecture:</strong> Implemented a layered backend architecture with a dedicated service layer for leave validation, including leave-balance checks, overlapping-date detection, role-based authorization, state transitions, audit trails, centralized error handling and structured logging.",
-        "<strong>React Dashboard & Pytest QA:</strong> Built a responsive React and Tailwind CSS dashboard with leave-balance charts, approval queues, status tracking and team calendar views; wrote Pytest unit and integration tests covering business rules and REST API endpoints."
+        "<strong>React Dashboard &amp; Pytest QA:</strong> Built a responsive React and Tailwind CSS dashboard with leave-balance charts, approval queues, status tracking and team calendar views; wrote Pytest unit and integration tests covering business rules and REST API endpoints."
       ],
       github: "https://github.com/krishna0712-hub"
     }
@@ -185,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const openModal = (projectId) => {
     const data = projectDetailsMap[projectId];
-    if (!data) return;
+    if (!data || !modalBody || !modalOverlay) return;
 
     modalBody.innerHTML = `
       <span class="featured-badge" style="margin-bottom: 0.5rem;">${data.badge}</span>
@@ -198,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.7;">${data.overview}</p>
 
       <div class="project-highlights-box" style="margin-bottom: 1.75rem;">
-        <h4>Architectural Details & Key Features:</h4>
+        <h4>Architectural Details &amp; Key Features:</h4>
         <ul style="display: flex; flex-direction: column; gap: 0.6rem;">
           ${data.architecture.map(item => `<li>${item}</li>`).join('')}
         </ul>
@@ -270,7 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
       toast.className = 'toast-notification';
       document.body.appendChild(toast);
     }
-    toast.innerHTML = `<span>✨</span> <span>${message}</span>`;
+    toast.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B86F50" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>${message}</span>`;
     toast.classList.add('show');
 
     setTimeout(() => {
@@ -281,35 +282,43 @@ document.addEventListener('DOMContentLoaded', () => {
   if (copyEmailBtn) {
     copyEmailBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      navigator.clipboard.writeText(emailAddress).then(() => {
-        showToast(`Copied ${emailAddress} to clipboard!`);
-      }).catch(() => {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(emailAddress).then(() => {
+          showToast(`Copied ${emailAddress} to clipboard!`);
+        }).catch(() => {
+          showToast(`Email: ${emailAddress}`);
+        });
+      } else {
         showToast(`Email: ${emailAddress}`);
-      });
+      }
     });
   }
 
   emailLinks.forEach(link => {
     link.addEventListener('click', () => {
-      navigator.clipboard.writeText(emailAddress).catch(() => {});
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(emailAddress).catch(() => {});
+      }
       showToast(`Opening Gmail for ${emailAddress}...`);
     });
   });
 
   // ==========================================================================
-  // 8. Dynamic AI Neural Network Canvas (Adapts to Light / Dark Theme)
+  // 8. Restrained Warm Editorial Ink Constellation Canvas (No Glows/Neon)
   // ==========================================================================
   const canvas = document.getElementById('cursor-trail-canvas');
-  if (canvas) {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (canvas && !prefersReducedMotion) {
     const ctx = canvas.getContext('2d');
     let particles = [];
     let isAnimating = false;
     let mousePos = { x: -100, y: -100 };
 
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth * window.devicePixelRatio;
-      canvas.height = window.innerHeight * window.devicePixelRatio;
-      ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = window.innerWidth * dpr;
+      canvas.height = window.innerHeight * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     };
 
     window.addEventListener('resize', resizeCanvas);
@@ -319,19 +328,19 @@ document.addEventListener('DOMContentLoaded', () => {
       mousePos.x = e.clientX;
       mousePos.y = e.clientY;
 
-      if (Math.random() < 0.75) {
+      if (Math.random() < 0.45) {
         particles.push({
           x: e.clientX + (Math.random() - 0.5) * 10,
           y: e.clientY + (Math.random() - 0.5) * 10,
-          vx: (Math.random() - 0.5) * 0.9,
-          vy: (Math.random() - 0.5) * 0.9 - 0.2,
-          radius: Math.random() * 2.5 + 2.0,
+          vx: (Math.random() - 0.5) * 0.5,
+          vy: (Math.random() - 0.5) * 0.5 - 0.15,
+          radius: Math.random() * 1.4 + 1.2,
           life: 1.0,
-          decay: Math.random() * 0.018 + 0.012
+          decay: Math.random() * 0.02 + 0.015
         });
       }
 
-      if (particles.length > 45) {
+      if (particles.length > 26) {
         particles.shift();
       }
 
@@ -342,33 +351,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const getThemeColors = () => {
-      const isLight = htmlElement.getAttribute('data-theme') === 'light';
+      const isDark = htmlElement.getAttribute('data-theme') === 'dark';
       return {
-        particleColor: isLight ? '2, 132, 199' : '0, 242, 254',
-        lineColor: isLight ? '37, 99, 235' : '79, 172, 254',
-        haloColor: isLight ? 'rgba(2, 132, 199, ' : 'rgba(0, 242, 254, '
+        particleColor: isDark ? '201, 125, 93' : '184, 111, 80',
+        lineColor: isDark ? '138, 146, 120' : '138, 146, 120'
       };
     };
 
     const renderConstellation = () => {
       ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
       const colors = getThemeColors();
-
-      // Mouse Glow Halo
-      if (mousePos.x > 0 && mousePos.y > 0) {
-        const haloGradient = ctx.createRadialGradient(
-          mousePos.x, mousePos.y, 0,
-          mousePos.x, mousePos.y, 35
-        );
-        haloGradient.addColorStop(0, colors.haloColor + '0.25)');
-        haloGradient.addColorStop(0.5, colors.haloColor + '0.08)');
-        haloGradient.addColorStop(1, colors.haloColor + '0)');
-
-        ctx.fillStyle = haloGradient;
-        ctx.beginPath();
-        ctx.arc(mousePos.x, mousePos.y, 35, 0, Math.PI * 2);
-        ctx.fill();
-      }
 
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i];
@@ -380,52 +372,34 @@ document.addEventListener('DOMContentLoaded', () => {
       particles = particles.filter(p => p.life > 0);
 
       if (particles.length > 0) {
-        const maxConnectDist = 85;
+        const maxConnectDist = 72;
 
-        // Neural Connection Lines
         for (let i = 0; i < particles.length; i++) {
           const p1 = particles[i];
-
-          const distToMouse = Math.hypot(mousePos.x - p1.x, mousePos.y - p1.y);
-          if (distToMouse < maxConnectDist) {
-            const lineAlpha = (1 - distToMouse / maxConnectDist) * p1.life * 0.45;
-            ctx.beginPath();
-            ctx.moveTo(p1.x, p1.y);
-            ctx.lineTo(mousePos.x, mousePos.y);
-            ctx.strokeStyle = `rgba(${colors.particleColor}, ${lineAlpha})`;
-            ctx.lineWidth = 1.2;
-            ctx.stroke();
-          }
 
           for (let j = i + 1; j < particles.length; j++) {
             const p2 = particles[j];
             const dist = Math.hypot(p1.x - p2.x, p1.y - p2.y);
 
             if (dist < maxConnectDist) {
-              const lineAlpha = (1 - dist / maxConnectDist) * Math.min(p1.life, p2.life) * 0.35;
+              const lineAlpha = (1 - dist / maxConnectDist) * Math.min(p1.life, p2.life) * 0.18;
               ctx.beginPath();
               ctx.moveTo(p1.x, p1.y);
               ctx.lineTo(p2.x, p2.y);
               ctx.strokeStyle = `rgba(${colors.lineColor}, ${lineAlpha})`;
-              ctx.lineWidth = 1.0;
+              ctx.lineWidth = 0.85;
               ctx.stroke();
             }
           }
         }
 
-        // Glowing Data Nodes
         for (let i = 0; i < particles.length; i++) {
           const p = particles[i];
-          const nodeAlpha = p.life * 0.8;
+          const nodeAlpha = p.life * 0.28;
 
           ctx.beginPath();
           ctx.arc(p.x, p.y, p.radius * p.life, 0, Math.PI * 2);
           ctx.fillStyle = `rgba(${colors.particleColor}, ${nodeAlpha})`;
-          ctx.fill();
-
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, (p.radius * 0.5) * p.life, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(255, 255, 255, ${nodeAlpha * 0.9})`;
           ctx.fill();
         }
 

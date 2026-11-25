@@ -1,47 +1,51 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Krishna Prasath P - AI & Data Science Portfolio. B.Tech student in Artificial Intelligence and Data Science at V.S.B College of Engineering Technical Campus (Anna University), Coimbatore. Building full-stack and LLM/RAG applications using Python, FastAPI, Flask, and SQL.">
+    content="Krishnaprasath P - AI & Data Science Portfolio. B.Tech student in Artificial Intelligence and Data Science at V.S.B College of Engineering Technical Campus (Anna University), Coimbatore. Building full-stack and LLM/RAG applications using Python, FastAPI, Flask, and SQL.">
   <meta name="keywords"
-    content="Krishna Prasath P, Krishna Prasath, Artificial Intelligence, Data Science, Portfolio, Software Development, Python, Prompt2Plan, LeaveTrack, FastAPI, Flask, React, SQL, LLM, RAG, Machine Learning, Coimbatore">
+    content="Krishnaprasath P, Krishnaprasath, Artificial Intelligence, Data Science, Portfolio, Software Development, Python, Prompt2Plan, LeaveTrack, FastAPI, Flask, React, SQL, LLM, RAG, Machine Learning, Coimbatore">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Krishna Prasath P — AI & Data Science Portfolio">
+  <meta property="og:title" content="Krishnaprasath P — AI & Data Science Portfolio">
   <meta property="og:description"
     content="B.Tech student in Artificial Intelligence and Data Science. Developer of Prompt2Plan and LeaveTrack. Hands-on experience building full-stack and LLM/RAG applications using Python, FastAPI, Flask, and SQL.">
   <meta property="og:image" content="assets/krishna.jpg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:title" content="Krishna Prasath P — AI & Data Science Portfolio">
+  <meta property="twitter:title" content="Krishnaprasath P — AI & Data Science Portfolio">
   <meta property="twitter:description"
     content="B.Tech student in Artificial Intelligence and Data Science. Developer of Prompt2Plan and LeaveTrack.">
   <meta property="twitter:image" content="assets/krishna.jpg">
 
   <link rel="canonical" href="https://krishnaprasath-portfolio.vercel.app">
-  <title>Krishna Prasath P — AI & Data Science Portfolio</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2328352D'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='28' fill='%23F5F0E8'%3EKP%3C/text%3E%3C/svg%3E">
+  <title>Krishnaprasath P — AI & Data Science Portfolio</title>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: DM Serif Display & DM Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap"
+    rel="stylesheet">
 
   <!-- Custom CSS Styles -->
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <!-- Neon Neural Canvas Background -->
-  <canvas id="cursor-trail-canvas"></canvas>
+  <!-- Subtle Canvas Background -->
+  <canvas id="cursor-trail-canvas" aria-hidden="true"></canvas>
 
-  <!-- Ambient Glow Elements -->
-  <div class="ambient-glow glow-top-left"></div>
-  <div class="ambient-glow glow-bottom-right"></div>
+  <!-- Ambient Elements (Disabled visually in editorial CSS, retained for structure) -->
+  <div class="ambient-glow glow-top-left" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom-right" aria-hidden="true"></div>
 
   <!-- ==========================================================================
        Header & Navigation
@@ -50,7 +54,7 @@
     <div class="container">
       <a href="#hero" class="logo" id="header-logo">
         <span class="logo-box">KP</span>
-        <span class="logo-text">Krishna Prasath</span>
+        <span class="logo-text">Krishnaprasath</span>
       </a>
 
       <nav class="nav" id="nav" aria-label="Main Navigation">
@@ -67,8 +71,10 @@
         </ul>
 
         <!-- Theme Toggle Switch -->
-        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle light and dark theme" title="Toggle Theme">
-          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle light and dark theme"
+          title="Toggle Theme">
+          <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -79,7 +85,8 @@
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
           </svg>
-          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
@@ -102,10 +109,14 @@
         <div class="hero-content">
           <div class="hero-badge">
             <span class="pulse-dot"></span>
-            <span class="badge-text">Available for AI, Data Science & Software Roles</span>
+            <span class="badge-text">Available for AI, Data Science &amp; Software Roles</span>
           </div>
-          <h1>Building <span class="gradient-text">Intelligent Systems</span> & Full-Stack Solutions.</h1>
-          <p class="hero-subtext">Hi, I'm <strong>Krishna Prasath P</strong> — a B.Tech Artificial Intelligence & Data Science student (graduating 2027). I build full-stack and LLM/RAG applications using Python, FastAPI, Flask, and SQL.</p>
+
+          <p class="hero-name-kicker">Krishnaprasath P</p>
+          <h1>Building <span class="editorial-accent">Intelligent Systems</span> &amp; Full-Stack Solutions.</h1>
+          <p class="hero-subtext">Hi, I'm <strong>Krishnaprasath P</strong> — a B.Tech Artificial Intelligence &amp;
+            Data Science student (graduating 2027). I build full-stack and LLM/RAG applications using Python, FastAPI,
+            Flask, and SQL.</p>
 
           <div class="hero-ctas">
             <a href="#projects" class="btn btn-primary" id="hero-cta-projects">Explore Projects →</a>
@@ -114,9 +125,9 @@
 
           <div class="social-row">
             <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/krishna-prasath-8a53043a3/" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/in/krishnaprasath-p-8a53043a3" target="_blank" rel="noopener noreferrer"
               class="social-icon" aria-label="LinkedIn" id="hero-linkedin" title="LinkedIn Profile">
-              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+              <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
               </svg>
@@ -124,14 +135,16 @@
             <!-- GitHub -->
             <a href="https://github.com/krishna0712-hub" target="_blank" rel="noopener noreferrer" class="social-icon"
               aria-label="GitHub" id="hero-github" title="GitHub Profile">
-              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+              <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
               </svg>
             </a>
             <!-- Email -->
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=krishnaprasath@gmail.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Email" id="hero-email" title="Compose Email in Gmail">
-              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=krishnaprasath0712@gmail.com" target="_blank"
+              rel="noopener noreferrer" class="social-icon" aria-label="Email" id="hero-email"
+              title="Compose Email in Gmail">
+              <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l12-9.725v14.438h-24v-14.438l12 9.725z" />
               </svg>
             </a>
@@ -140,9 +153,12 @@
 
         <div class="hero-visual">
           <div class="hero-img-card">
-            <div class="hero-img-glow"></div>
-            <img src="assets/krishna.jpg" alt="Krishna Prasath P Portrait Photo" loading="eager" width="400"
+            <img src="assets/krishna.jpg" alt="Krishnaprasath P Portrait Photo" loading="eager" width="400"
               height="400">
+            <div class="hero-img-caption">
+              <span>Coimbatore, India</span>
+              <span>B.Tech AI &amp; DS · '27</span>
+            </div>
           </div>
         </div>
       </div>
@@ -156,22 +172,18 @@
     <div class="container">
       <div class="stats-grid">
         <div class="stat-card">
-          <div class="stat-icon">💼</div>
           <div class="stat-number" data-target="2" data-suffix="+">0</div>
           <div class="stat-label">Internships Completed</div>
         </div>
         <div class="stat-card">
-          <div class="stat-icon">🚀</div>
           <div class="stat-number" data-target="2" data-suffix="+">0</div>
           <div class="stat-label">Full-Stack AI Projects</div>
         </div>
         <div class="stat-card">
-          <div class="stat-icon">📜</div>
           <div class="stat-number" data-target="5" data-suffix="+">0</div>
           <div class="stat-label">Certifications Earned</div>
         </div>
         <div class="stat-card">
-          <div class="stat-icon">🎓</div>
           <div class="stat-number" data-target="74.6" data-suffix="%">0</div>
           <div class="stat-label">B.Tech Academic Score</div>
         </div>
@@ -186,28 +198,50 @@
     <div class="container">
       <div class="section-header">
         <span class="eyebrow">About Me</span>
-        <h2 class="section-title">Academic Foundation & Engineering Drive</h2>
-        <p class="section-desc">Combining artificial intelligence expertise with full-stack software development to build real-world products.</p>
+        <h2 class="section-title">Academic Foundation &amp; Engineering Drive</h2>
+        <p class="section-desc">Combining artificial intelligence expertise with full-stack software development to
+          build real-world products.</p>
       </div>
 
       <div class="about-grid">
         <div class="about-content">
-          <p class="lead-text">I am a B.Tech student in <strong>Artificial Intelligence and Data Science (graduating 2027)</strong> with hands-on experience building full-stack and LLM/RAG applications using Python, FastAPI, Flask, and SQL, plus internships in computer vision and data science.</p>
-          <p>Seeking an entry-level role in AI, Data Science or Software Development to apply data analysis and backend development skills to real-world problems. Driven by analytical curiosity, I specialize in building end-to-end applications — from RAG & vector search pipelines to scalable backend REST APIs, service-layer validation engines, and responsive web dashboards.</p>
-          
+          <p class="lead-text">I am a B.Tech student in <strong>Artificial Intelligence and Data Science (graduating
+              2027)</strong> with hands-on experience building full-stack and LLM/RAG applications using Python,
+            FastAPI, Flask, and SQL, plus internships in computer vision and data science.</p>
+          <p>Seeking an entry-level role in AI, Data Science or Software Development to apply data analysis and backend
+            development skills to real world problems. Driven by analytical curiosity, I specialize in building
+            end-to-end applications from RAG &amp; vector search pipelines to scalable backend REST APIs,
+            service-layer validation engines, and responsive web dashboards.</p>
+
           <div class="about-highlights">
             <div class="highlight-item">
-              <span class="highlight-icon">⚡</span>
+              <span class="highlight-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </span>
               <div>
-                <h4>LLM / RAG & AI Architecture</h4>
-                <p>Building vector search pipelines (FAISS), knowledge graphs, and automated requirement-to-architecture planning tools.</p>
+                <h4>LLM / RAG &amp; AI Architecture</h4>
+                <p>Building vector search pipelines (FAISS), knowledge graphs, and automated requirement-to-architecture
+                  planning tools.</p>
               </div>
             </div>
             <div class="highlight-item">
-              <span class="highlight-icon">🛠️</span>
+              <span class="highlight-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </span>
               <div>
-                <h4>Full-Stack & Layered Backend Systems</h4>
-                <p>Engineering clean service architectures with Python (FastAPI, Flask), React, SQL, REST APIs, and structured error handling.</p>
+                <h4>Full-Stack &amp; Layered Backend Systems</h4>
+                <p>Engineering clean service architectures with Python (FastAPI, Flask), React, SQL, REST APIs, and
+                  structured error handling.</p>
               </div>
             </div>
           </div>
@@ -218,7 +252,7 @@
           <div class="education-timeline">
             <div class="education-item">
               <div class="edu-badge">2023 – 2027</div>
-              <h4 class="edu-degree">B.Tech, Artificial Intelligence & Data Science</h4>
+              <h4 class="edu-degree">B.Tech, Artificial Intelligence &amp; Data Science</h4>
               <p class="edu-institution">V.S.B College of Engineering Technical Campus</p>
               <p class="edu-meta">(Anna University), Coimbatore</p>
               <div class="edu-score">Percentage: <span>74.6%</span></div>
@@ -240,11 +274,11 @@
   <!-- ==========================================================================
        Skills Breakdown Grid
        ========================================================================== -->
-  <section class="section-padding reveal" id="skills" style="background-color: var(--bg-secondary);">
+  <section class="section-padding reveal section-tinted" id="skills">
     <div class="container">
       <div class="section-header">
         <span class="eyebrow">Technical Skills</span>
-        <h2 class="section-title">Core Competencies & Stack</h2>
+        <h2 class="section-title">Core Competencies &amp; Stack</h2>
         <p class="section-desc">Technologies and engineering tools used to build end-to-end software solutions.</p>
       </div>
 
@@ -252,10 +286,10 @@
         <!-- Card 1: Programming Languages -->
         <div class="skills-card">
           <div class="skill-card-header">
-            <span class="skill-card-icon">💻</span>
             <span class="skill-card-num">01</span>
+            <span class="skill-card-category">Foundations</span>
           </div>
-          <h3>Programming & Data</h3>
+          <h3>Programming &amp; Data</h3>
           <p>Writing clean, efficient code for machine learning models, REST APIs, and data engineering pipelines.</p>
           <div class="skills-pills">
             <span class="skill-pill">Python</span>
@@ -266,10 +300,10 @@
         <!-- Card 2: AI & Data Science -->
         <div class="skills-card">
           <div class="skill-card-header">
-            <span class="skill-card-icon">🧠</span>
             <span class="skill-card-num">02</span>
+            <span class="skill-card-category">Intelligence</span>
           </div>
-          <h3>AI & Data Science</h3>
+          <h3>AI &amp; Data Science</h3>
           <p>Developing generative AI systems, RAG workflows, vector search pipelines, and predictive ML models.</p>
           <div class="skills-pills">
             <span class="skill-pill">Large Language Models (LLMs)</span>
@@ -284,11 +318,12 @@
         <!-- Card 3: Backend & Web Architecture -->
         <div class="skills-card">
           <div class="skill-card-header">
-            <span class="skill-card-icon">⚡</span>
             <span class="skill-card-num">03</span>
+            <span class="skill-card-category">Systems</span>
           </div>
-          <h3>Backend, Web & Databases</h3>
-          <p>Developing full-stack web applications, REST APIs, relational database models, and automated test suites.</p>
+          <h3>Backend, Web &amp; Databases</h3>
+          <p>Developing full-stack web applications, REST APIs, relational database models, and automated test suites.
+          </p>
           <div class="skills-pills">
             <span class="skill-pill">FastAPI</span>
             <span class="skill-pill">Flask</span>
@@ -304,10 +339,10 @@
         <!-- Card 4: Tools & Professional Skills -->
         <div class="skills-card">
           <div class="skill-card-header">
-            <span class="skill-card-icon">🛠️</span>
             <span class="skill-card-num">04</span>
+            <span class="skill-card-category">Workflow</span>
           </div>
-          <h3>Tools & Professional Skills</h3>
+          <h3>Tools &amp; Professional Skills</h3>
           <p>Utilizing modern dev toolchains while collaborating effectively in fast-paced software environments.</p>
           <div class="skills-pills">
             <span class="skill-pill">Git</span>
@@ -332,13 +367,14 @@
       <div class="section-header">
         <span class="eyebrow">Experience</span>
         <h2 class="section-title">Industry Internships</h2>
-        <p class="section-desc">Practical hands-on experience in AI computer vision systems and data science engineering.</p>
+        <p class="section-desc">Practical hands-on experience in AI computer vision systems and data science
+          engineering.</p>
       </div>
 
       <div class="experience-timeline">
         <!-- Experience Item 1 -->
         <div class="experience-card">
-          <div class="exp-timeline-node"></div>
+          <div class="exp-timeline-node" aria-hidden="true"></div>
           <div class="exp-header">
             <div>
               <h3 class="exp-title">Data Science Intern</h3>
@@ -347,13 +383,14 @@
             <span class="exp-date">06/2025 – 07/2025</span>
           </div>
           <ul class="exp-bullets">
-            <li>Analyzed datasets, performed data cleaning and visualization, and built machine learning models to derive insights that support data-driven decision-making.</li>
+            <li>Analyzed datasets, performed data cleaning and visualization, and built machine learning models to
+              derive insights that support data-driven decision-making.</li>
           </ul>
         </div>
 
         <!-- Experience Item 2 -->
         <div class="experience-card">
-          <div class="exp-timeline-node"></div>
+          <div class="exp-timeline-node alt" aria-hidden="true"></div>
           <div class="exp-header">
             <div>
               <h3 class="exp-title">Artificial Intelligence Intern</h3>
@@ -362,7 +399,8 @@
             <span class="exp-date">02/2024 – 03/2024</span>
           </div>
           <ul class="exp-bullets">
-            <li>Developed a real-time vehicle speed detection system using machine learning and computer vision techniques to analyze video footage and estimate vehicle speeds.</li>
+            <li>Developed a real-time vehicle speed detection system using machine learning and computer vision
+              techniques to analyze video footage and estimate vehicle speeds.</li>
           </ul>
         </div>
       </div>
@@ -372,21 +410,25 @@
   <!-- ==========================================================================
        Projects Section (Featured Projects Showcase with Live Demos)
        ========================================================================== -->
-  <section class="section-padding reveal" id="projects" style="background-color: var(--bg-secondary);">
+  <section class="section-padding reveal section-tinted" id="projects">
     <div class="container">
       <div class="section-header">
         <span class="eyebrow">Projects Showcase</span>
-        <h2 class="section-title">Featured Software & AI Projects</h2>
-        <p class="section-desc">Explore full-stack software applications, RAG pipelines, and automated management systems with live interactive demos.</p>
+        <h2 class="section-title">Featured Software &amp; AI Projects</h2>
+        <p class="section-desc">Explore full-stack software applications, RAG pipelines, and automated management
+          systems with live interactive demos.</p>
       </div>
 
       <div class="projects-container">
-        
+
         <!-- PROJECT 1: Prompt2Plan (AI Requirement to Project Planner) -->
-        <div class="featured-card" id="project-prompt2plan">
+        <article class="featured-card" id="project-prompt2plan">
           <div class="featured-img-area">
-            <div class="project-tag-overlay"><span class="pulse-dot"></span> LIVE DEMO</div>
-            <img src="assets/prompt2plan.png" alt="Prompt2Plan AI Requirement to Project Planner Mockup" loading="lazy" width="550" height="400">
+            <div class="project-screenshot-frame">
+              <div class="project-tag-overlay"><span class="pulse-dot"></span> LIVE DEMO</div>
+              <img src="assets/prompt2plan.png" alt="Prompt2Plan AI Requirement to Project Planner Mockup"
+                loading="lazy" width="550" height="550">
+            </div>
           </div>
           <div class="featured-info">
             <span class="featured-badge">★ Featured Project — AI System Architecture Planner</span>
@@ -401,44 +443,58 @@
               <span class="tag">SQLite</span>
               <span class="tag">Python</span>
             </div>
-            <p class="project-summary">AI requirement-to-project planner converting free-text project ideas into technically grounded system architectures, task breakdowns, effort estimations, and milestone schedules.</p>
+            <p class="project-summary">AI requirement-to-project planner converting free-text project ideas into
+              technically grounded system architectures, task breakdowns, effort estimations, and milestone schedules.
+            </p>
 
             <div class="project-highlights-box">
               <h4>Key Engineering Highlights:</h4>
               <ul>
-                <li><strong>RAG & Knowledge Graph Pipeline:</strong> Built a RAG and knowledge graph pipeline using LLM-based NLP, FAISS vector search and dependency mapping to generate technically grounded system architectures from free-text project ideas.</li>
-                <li><strong>Automated Effort & Timeline Scheduling:</strong> Automated task breakdown, effort estimation and milestone scheduling into structured, time-bound project plans.</li>
-                <li><strong>Interactive Full-Stack Application:</strong> Developed a full-stack application (FastAPI, React, SQLite) that renders live architecture diagrams, task boards and timelines from generated plans.</li>
+                <li><strong>RAG &amp; Knowledge Graph Pipeline:</strong> Built a RAG and knowledge graph pipeline using
+                  LLM-based NLP, FAISS vector search and dependency mapping to generate technically grounded system
+                  architectures from free-text project ideas.</li>
+                <li><strong>Automated Effort &amp; Timeline Scheduling:</strong> Automated task breakdown, effort
+                  estimation and milestone scheduling into structured, time-bound project plans.</li>
+                <li><strong>Interactive Full-Stack Application:</strong> Developed a full-stack application (FastAPI,
+                  React, SQLite) that renders live architecture diagrams, task boards and timelines from generated
+                  plans.</li>
               </ul>
             </div>
 
             <div class="project-links">
               <a href="https://prompt2plan.onrender.com" target="_blank" rel="noopener noreferrer"
                 class="btn btn-primary" id="project-prompt2plan-demo" title="Open Prompt2Plan Live Demo">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="12" cy="12" r="10"></circle>
                   <line x1="2" y1="12" x2="22" y2="12"></line>
-                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                  </path>
                 </svg>
                 Live Demo ↗
               </a>
               <a href="https://github.com/krishna0712-hub/Prompt2Plan" target="_blank" rel="noopener noreferrer"
                 class="btn btn-secondary" id="project-prompt2plan-github" title="View Prompt2Plan GitHub Repository">
                 <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                 </svg>
                 GitHub Repository ↗
               </a>
               <button class="btn btn-secondary open-modal-btn" data-project="prompt2plan">Technical Details ↗</button>
             </div>
           </div>
-        </div>
+        </article>
 
         <!-- PROJECT 2: LeaveTrack (Employee Leave Management System) -->
-        <div class="featured-card" id="project-leavetrack">
+        <article class="featured-card" id="project-leavetrack">
           <div class="featured-img-area">
-            <div class="project-tag-overlay"><span class="pulse-dot"></span> LIVE DEMO</div>
-            <img src="assets/leavetrack.jpg" alt="LeaveTrack Employee Leave Management System Dashboard Interface Mockup" loading="lazy" width="550" height="400">
+            <div class="project-screenshot-frame">
+              <div class="project-tag-overlay"><span class="pulse-dot"></span> LIVE DEMO</div>
+              <img src="assets/leavetrack.jpg"
+                alt="LeaveTrack Employee Leave Management System Dashboard Interface Mockup" loading="lazy" width="550"
+                height="550">
+            </div>
           </div>
           <div class="featured-info">
             <span class="featured-badge">★ Featured Project — Enterprise Leave Management</span>
@@ -452,38 +508,50 @@
               <span class="tag">Tailwind CSS</span>
               <span class="tag">Pytest</span>
             </div>
-            <p class="project-summary">Full-stack employee leave management system providing employee and manager workflows for leave application, approval, rejection, cancellation, and team calendar management.</p>
+            <p class="project-summary">Full-stack employee leave management system providing employee and manager
+              workflows for leave application, approval, rejection, cancellation, and team calendar management.</p>
 
             <div class="project-highlights-box">
               <h4>Key Engineering Highlights:</h4>
               <ul>
-                <li><strong>Workflows & Roles:</strong> Developed a full-stack leave management system using Python, Flask, React, REST APIs and SQL, implementing employee and manager workflows for leave application, approval, rejection, cancellation and team calendar management.</li>
-                <li><strong>Layered Backend Architecture:</strong> Implemented a layered backend architecture with a dedicated service layer for leave validation, including leave-balance checks, overlapping-date detection, role-based authorization, state transitions, audit trails, centralized error handling and structured logging.</li>
-                <li><strong>React Dashboard & Pytest QA:</strong> Built a responsive React and Tailwind CSS dashboard with leave-balance charts, approval queues, status tracking and team calendar views; wrote Pytest unit and integration tests covering business rules and REST API endpoints.</li>
+                <li><strong>Workflows &amp; Roles:</strong> Developed a full-stack leave management system using Python,
+                  Flask, React, REST APIs and SQL, implementing employee and manager workflows for leave application,
+                  approval, rejection, cancellation and team calendar management.</li>
+                <li><strong>Layered Backend Architecture:</strong> Implemented a layered backend architecture with a
+                  dedicated service layer for leave validation, including leave-balance checks, overlapping-date
+                  detection, role-based authorization, state transitions, audit trails, centralized error handling and
+                  structured logging.</li>
+                <li><strong>React Dashboard &amp; Pytest QA:</strong> Built a responsive React and Tailwind CSS
+                  dashboard with leave-balance charts, approval queues, status tracking and team calendar views; wrote
+                  Pytest unit and integration tests covering business rules and REST API endpoints.</li>
               </ul>
             </div>
 
             <div class="project-links">
               <a href="https://leavetracker-mu.vercel.app" target="_blank" rel="noopener noreferrer"
                 class="btn btn-primary" id="project-leavetrack-demo" title="Open LeaveTrack Live Demo">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="12" cy="12" r="10"></circle>
                   <line x1="2" y1="12" x2="22" y2="12"></line>
-                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                  </path>
                 </svg>
                 Live Demo ↗
               </a>
               <a href="https://github.com/krishna0712-hub" target="_blank" rel="noopener noreferrer"
-                class="btn btn-secondary" id="project-leavetrack-github" title="View LeaveTrack GitHub Profile/Repository">
+                class="btn btn-secondary" id="project-leavetrack-github"
+                title="View LeaveTrack GitHub Profile/Repository">
                 <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                 </svg>
                 GitHub Repository ↗
               </a>
               <button class="btn btn-secondary open-modal-btn" data-project="leavetrack">Technical Details ↗</button>
             </div>
           </div>
-        </div>
+        </article>
 
       </div>
     </div>
@@ -496,86 +564,150 @@
     <div class="container">
       <div class="section-header">
         <span class="eyebrow">Credentials</span>
-        <h2 class="section-title">Certifications & Workshops</h2>
-        <p class="section-desc">Professional certifications validating competencies in Cloud Computing, Python, IoT, and Robotics.</p>
+        <h2 class="section-title">Certifications &amp; Workshops</h2>
+        <p class="section-desc">Professional certifications validating competencies in Cloud Computing, Python, IoT, and
+          Robotics.</p>
       </div>
 
       <div class="certifications-grid">
         <!-- Cert 1 -->
         <div class="cert-card highlight-cert">
-          <div class="cert-badge-row">
-            <span class="cert-issuer aws">AWS Training & Certification</span>
-            <span class="cert-status-badge aws">Certified</span>
+          <div>
+            <div class="cert-badge-row">
+              <span class="cert-issuer aws">AWS Training &amp; Certification</span>
+              <span class="cert-status-badge aws">Certified</span>
+            </div>
+            <h3>Cloud Practitioner Essentials</h3>
+            <p class="cert-desc">AWS official training validating cloud architecture, security principles, IAM, compute
+              (EC2/Lambda), and cloud fundamentals.</p>
           </div>
-          <h3>Cloud Practitioner Essentials</h3>
-          <p class="cert-desc">AWS official training validating cloud architecture, security principles, IAM, compute (EC2/Lambda), and cloud fundamentals.</p>
-          <span class="cert-date">📅 July 2026</span>
+          <span class="cert-date">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            July 2026
+          </span>
         </div>
 
         <!-- Cert 2 -->
         <div class="cert-card">
-          <div class="cert-badge-row">
-            <span class="cert-issuer">NPTEL</span>
-            <span class="cert-status-badge">Certification</span>
+          <div>
+            <div class="cert-badge-row">
+              <span class="cert-issuer">NPTEL</span>
+              <span class="cert-status-badge">Certification</span>
+            </div>
+            <h3>Introduction to Internet of Things</h3>
+            <p class="cert-desc">Specialized course covering IoT protocols, sensor networks, edge computing, and smart
+              connected device architectures.</p>
           </div>
-          <h3>Introduction to Internet of Things</h3>
-          <p class="cert-desc">Specialized course covering IoT protocols, sensor networks, edge computing, and smart connected device architectures.</p>
-          <span class="cert-date">📅 Jan 2026 – Apr 2026</span>
+          <span class="cert-date">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            Jan 2026 – Apr 2026
+          </span>
         </div>
 
         <!-- Cert 3 -->
         <div class="cert-card">
-          <div class="cert-badge-row">
-            <span class="cert-issuer">NPTEL</span>
-            <span class="cert-status-badge">Certification</span>
+          <div>
+            <div class="cert-badge-row">
+              <span class="cert-issuer">NPTEL</span>
+              <span class="cert-status-badge">Certification</span>
+            </div>
+            <h3>Cloud Computing</h3>
+            <p class="cert-desc">Comprehensive certification covering cloud architectures, virtualization, distributed
+              storage systems, and cloud deployment models.</p>
           </div>
-          <h3>Cloud Computing</h3>
-          <p class="cert-desc">Comprehensive certification covering cloud architectures, virtualization, distributed storage systems, and cloud deployment models.</p>
-          <span class="cert-date">📅 Jul 2025 – Oct 2025</span>
+          <span class="cert-date">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            Jul 2025 – Oct 2025
+          </span>
         </div>
 
         <!-- Cert 4 -->
         <div class="cert-card">
-          <div class="cert-badge-row">
-            <span class="cert-issuer">Top Engineers IIT</span>
-            <span class="cert-status-badge">Workshop</span>
+          <div>
+            <div class="cert-badge-row">
+              <span class="cert-issuer">Top Engineers IIT</span>
+              <span class="cert-status-badge">Workshop</span>
+            </div>
+            <h3>Arduino Robotics Workshop</h3>
+            <p class="cert-desc">Hands-on practical workshop covering microcontrollers, sensor integration, hardware
+              prototyping, and Arduino embedded programming.</p>
           </div>
-          <h3>Arduino Robotics Workshop</h3>
-          <p class="cert-desc">Hands-on practical workshop covering microcontrollers, sensor integration, hardware prototyping, and Arduino embedded programming.</p>
-          <span class="cert-date">📅 Dec 2023</span>
+          <span class="cert-date">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            Dec 2023
+          </span>
         </div>
 
         <!-- Cert 5 -->
         <div class="cert-card">
-          <div class="cert-badge-row">
-            <span class="cert-issuer">CSC</span>
-            <span class="cert-status-badge">Certified</span>
+          <div>
+            <div class="cert-badge-row">
+              <span class="cert-issuer">CSC</span>
+              <span class="cert-status-badge">Certified</span>
+            </div>
+            <h3>Advanced Diploma in Python Programming</h3>
+            <p class="cert-desc">In-depth Python programming diploma covering core syntax, data structures, algorithms,
+              object-oriented concepts, and software engineering.</p>
           </div>
-          <h3>Advanced Diploma in Python Programming</h3>
-          <p class="cert-desc">In-depth Python programming diploma covering core syntax, data structures, algorithms, object-oriented concepts, and software engineering.</p>
-          <span class="cert-date">📅 May 2023 – Sep 2023</span>
+          <span class="cert-date">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            May 2023 – Sep 2023
+          </span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-       Contact Section
+       Contact Section (Dark Forest Green Closing Band)
        ========================================================================== -->
-  <section class="section-padding reveal" id="contact" style="background-color: var(--bg-secondary);">
+  <section class="section-padding reveal contact-section" id="contact">
     <div class="container">
       <div class="contact-content">
         <span class="eyebrow">Get In Touch</span>
-        <h2 class="section-title">Let's Connect & Build Together!</h2>
-        <p class="section-desc">Seeking an entry-level role in AI, Data Science or Software Development to apply data analysis and backend development skills to real-world problems. Reach out via email or connect on social platforms.</p>
+        <h2 class="section-title">Let's Connect &amp; Build Together!</h2>
+        <p class="section-desc">Seeking an entry-level role in AI, Data Science or Software Development to apply data
+          analysis and backend development skills to real-world problems. Reach out via email or connect on social
+          platforms.</p>
 
         <div class="contact-card">
           <div class="contact-email-wrapper">
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=krishnaprasath@gmail.com" target="_blank" rel="noopener noreferrer" class="contact-email"
-              id="contact-email-link" title="Compose Email in Gmail">krishnaprasath@gmail.com</a>
-            
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=krishnaprasath0712@gmail.com" target="_blank"
+              rel="noopener noreferrer" class="contact-email" id="contact-email-link"
+              title="Compose Email in Gmail">krishnaprasath0712@gmail.com</a>
+
             <button id="copy-email-btn" class="copy-email-btn" title="Copy email address">
-              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
               </svg>
@@ -585,20 +717,33 @@
 
           <div class="contact-details">
             <div class="contact-detail-item">
-              <span class="detail-icon">📱</span>
+              <span class="detail-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+              </span>
               <span>Mobile: <strong>+91 9787586793</strong></span>
             </div>
             <div class="contact-detail-item">
-              <span class="detail-icon">📍</span>
+              <span class="detail-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
               <span>Location: <strong>Coimbatore, Tamil Nadu, India</strong></span>
             </div>
           </div>
 
           <div class="social-row">
             <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/krishna-prasath-8a53043a3/" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/in/krishnaprasath-p-8a53043a3" target="_blank" rel="noopener noreferrer"
               class="social-icon" aria-label="LinkedIn" id="contact-linkedin" title="LinkedIn Profile">
-              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+              <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
               </svg>
@@ -606,14 +751,16 @@
             <!-- GitHub -->
             <a href="https://github.com/krishna0712-hub" target="_blank" rel="noopener noreferrer" class="social-icon"
               aria-label="GitHub" id="contact-github" title="GitHub Profile">
-              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+              <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
               </svg>
             </a>
             <!-- Email -->
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=krishnaprasath@gmail.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Email" id="contact-email-icon" title="Compose Email in Gmail">
-              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=krishnaprasath0712@gmail.com" target="_blank"
+              rel="noopener noreferrer" class="social-icon" aria-label="Email" id="contact-email-icon"
+              title="Compose Email in Gmail">
+              <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l12-9.725v14.438h-24v-14.438l12 9.725z" />
               </svg>
             </a>
@@ -641,7 +788,8 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <p>&copy; 2026 <strong>Krishna Prasath P</strong> — Crafted for Artificial Intelligence & Data Science Portfolio.</p>
+        <p>&copy; 2026 <strong>Krishnaprasath P</strong> — Crafted for Artificial Intelligence &amp; Data Science
+          Portfolio.</p>
       </div>
     </div>
   </footer>

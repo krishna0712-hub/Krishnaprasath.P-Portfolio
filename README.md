@@ -1,4 +1,4 @@
-# Krishna Prasath P — AI & Data Science Portfolio
+# Krishnaprasath P — AI & Data Science Portfolio
 
 > **Live Portfolio:** [krishnaprasath-portfolio.vercel.app](https://krishnaprasath-portfolio.vercel.app)
 
@@ -66,6 +66,6 @@ B.Tech student in Artificial Intelligence and Data Science (graduating 2027) wit
 - **Email:** [krishnaprasath@gmail.com](mailto:krishnaprasath@gmail.com)
 - **Mobile:** +91 9787586793
 - **Location:** Coimbatore, Tamil Nadu, India
-- **LinkedIn:** [linkedin.com/in/krishna-prasath-8a53043a3](https://www.linkedin.com/in/krishna-prasath-8a53043a3/)
+- **LinkedIn:** [www.linkedin.com/in/krishnaprasath-p-8a53043a3](https://www.linkedin.com/in/krishnaprasath-p-8a53043a3)
 - **GitHub:** [github.com/krishna0712-hub](https://github.com/krishna0712-hub)
 - **Portfolio:** [krishnaprasath-portfolio.vercel.app](https://krishnaprasath-portfolio.vercel.app)
